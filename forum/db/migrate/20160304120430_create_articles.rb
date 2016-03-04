@@ -4,8 +4,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.text :text
-      t.boolean :edited
-      t.boolean :deleted
 
       t.timestamps null: false
     end

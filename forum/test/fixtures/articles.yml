@@ -4,12 +4,8 @@ one:
   name: MyString
   email: MyString
   text: MyText
-  edited: false
-  deleted: false
 
 two:
   name: MyString
   email: MyString
   text: MyText
-  edited: false
-  deleted: false

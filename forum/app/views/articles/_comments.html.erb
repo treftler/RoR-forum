@@ -1,0 +1,29 @@
+<style>
+table, th, td {
+  width: 60%;
+  border: 1px solid black;
+  frame: hsides;
+  rules: rows;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+
+<%= link_to 'Post comment', new_article_path %><br>
+
+<% @articles.each do |article| %>
+  <br>
+  <table>
+    <tr>
+      <td width="20%"><%= article.created_at %><br>Name: <%= article.name %><br>E-mail: <%= article.email %></td>
+      <tr>
+      <td width="50%"> Comment: <%= simple_format(article.text) %></td>
+      </tr>
+    </tr>
+  </table>
+<% end %>
+
+<p><%= link_to 'Post comment', new_article_path %></p>
+

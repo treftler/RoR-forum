@@ -1,0 +1,33 @@
+<style>
+table, th, td {
+  width: 80%;
+  border: 1px solid black;
+  frame: hsides;
+  rules: rows;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+
+<h1>Admin Screen</h1>
+
+<%= link_to 'Back', articles_path %><br>
+
+<% @articles.each do |article| %>
+  <br>
+  <table>
+    <tr>
+      <td width="20%"><%= article.created_at %><br>Name: <%= article.name %><br>E-mail: <%= article.email %></td>
+      <tr>
+      <td width="50%"> Comment: <%= simple_format(article.text) %></td>
+      <td><%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </tr>
+  </table>
+<% end %>
+
+<br><%= link_to 'Back', articles_path %>

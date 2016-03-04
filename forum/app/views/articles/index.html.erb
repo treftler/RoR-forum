@@ -1,0 +1,17 @@
+<% if @are_more_pages %>
+  <h1>Top (1 / <%= @total_pages %>)</h1>
+<% else %>
+  <h1>Top</h1>
+<% end %>
+
+<%= render 'comments' %>
+
+<% if @are_more_pages %>
+  <p>
+    <%= link_to 'Old Posts', article_page_path(2) %>
+  </p>
+<% end %>
+
+<p><%= link_to 'Show all', article_all_path %></p>
+
+<p><%= link_to 'Admin', article_admin_path %></p>

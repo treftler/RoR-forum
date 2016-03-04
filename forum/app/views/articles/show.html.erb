@@ -1,0 +1,21 @@
+<p>
+  <strong>Time:</strong>
+  <%= @article.created_at %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.name %>
+</p>
+
+<p>
+  <strong>E-mail:</strong>
+  <%= @article.email %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= simple_format(@article.text) %>
+</p>
+
+<%= link_to 'Back', articles_path %>
